@@ -1,0 +1,46 @@
+.--ttip-container {
+  position:relative; /* making the .tooltip span a container for the tooltip text */
+}
+.--ttip-container:before {
+  content: attr(data-tooltip); /* here's the magic */
+  position:absolute;
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+  /* move to right */
+  left:100%;
+  margin-left:15px; /* and add a small left margin */
+  font-size: 11pt;
+  /* basic styles */
+  min-width:100px;
+  padding:5px;
+  border-radius:10px;
+  background:#000;
+  color: #fff;
+  text-align:center;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity:0;
+  transition:.3s opacity;   
+}
+.--ttip-container:hover:before {
+  opacity: 1;
+  display:block;
+}
+.--ttip-container:after {
+  content: "";
+  position:absolute;
+  /* position tooltip correctly */
+  left:100%;
+  margin-left:-5px;
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+  /* the arrow */
+  border:10px solid #000;
+  border-color: transparent black transparent transparent;
+  opacity:0;
+  transition:.3s opacity;  
+}
+.--ttip-container:hover:before, .--ttip-container:hover:after {
+  opacity: 1;
+}
