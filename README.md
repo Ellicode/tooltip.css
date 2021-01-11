@@ -15,4 +15,3 @@ To make a tooltip, you need to add the ```data-tooltip``` attribute and the ```.
 ```html
 <span class="class attributes...">element...</span>
 ```
-:point_up: **Info** In your HTML file, the dashed underline will not appear:point_up: **Inf In your HTML file, the dashed underline will not appear
